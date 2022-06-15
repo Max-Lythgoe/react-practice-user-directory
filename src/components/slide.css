@@ -1,0 +1,39 @@
+.container-slide {
+    background-color: rgb(232, 232, 232);
+    margin: 2em;
+}
+
+.item {
+    display: flex;
+    justify-content: flex-start;
+    margin: 1em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.item.title {
+    size: large;
+    text-decoration: underline;
+    text-decoration-color: rgb(0, 178, 248);
+    padding-top: 1em;
+    font-weight: 800;
+}
+
+.item.main {
+    margin: 2em;
+}
+
+ol {
+    gap: 20px;
+    columns: 1;
+}
+
+.item-movies {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    margin: 2em;
+}
+
+b {
+    margin-right: 1em;
+}

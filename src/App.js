@@ -1,25 +1,28 @@
-import logo from './logo.svg';
+import React, {useState} from 'react';
 import './App.css';
+import Slide from './components/slide'
+import slideInfo from './data'
+import NewSlide from './components/NewSlide'
 
 function App() {
+  const [info, setSlides] = useState(slideInfo);
+
+  const addSlideHandler = (slide) => {
+    setSlides((prevSlides) => {
+      return [...prevSlides, slide];
+    });
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+      <div className="App">
+        <header>
+          <h1 className="home">Home</h1>
+          </header>
+        <Slide items={info} />
+        <NewSlide onAddSlide={addSlideHandler} items={info} />
+      <footer></footer>
+      </div>
+    );
 }
 
 export default App;
